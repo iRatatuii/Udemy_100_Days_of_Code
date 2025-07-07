@@ -4,7 +4,6 @@ from turtle import Turtle, Screen
 
 timmy = Turtle()
 timmy.speed('fastest')
-timmy.pensize(10)
 
 
 def random_color():
@@ -14,12 +13,12 @@ def random_color():
     random_color = (r, g, b)
     return random_color
 
-
-directions = [0, 90, 180, 270]
-for i in range(200):
+for i in range(1, 1000, 10):
     timmy.color(random_color())
-    timmy.forward(30)
-    timmy.setheading(choice(directions))
+    timmy.circle(150)
+    timmy.setheading(i)
+
+
         
 screen = Screen()
 screen.exitonclick()
