@@ -1,4 +1,4 @@
-from data import question_data, r
+from data import question_data
 from question_module import Question
 from quiz_brain import QuizBrain
 
@@ -8,7 +8,7 @@ question_bank = []
 #     answer = item.get('answer')
 #     question_bank.append(Question(text, answer))
 
-for item in r['results']:
+for item in question_data['results']:
     text = item.get('question')
     answer = item.get('correct_answer')
     question_bank.append(Question(text, answer))
